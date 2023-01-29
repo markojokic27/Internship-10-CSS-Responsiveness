@@ -38,48 +38,55 @@ body {
   padding: 0;
   background-color: #101820;
 }
-.layout-spacing{
+.layout-spacing {
   max-width: 1200px;
   margin: 80px auto;
   height: 3000px;
 }
-@media screen and (max-width:1366px){
-  .layout-spacing{
+@media screen and (max-width: 1365px) {
+  .layout-spacing {
     margin: 80px 20px;
   }
 }
 
 /*Navigation*/
-.navigation{
+.navigation {
   display: flex;
   height: 80px;
   margin: 0;
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: 100%;
+  right: 0;
+  left: 0;
   top: 0;
 }
-.navigation__wrapper{
+@media screen and (max-width: 1365px) {
+  .navigation {
+    right: 20px;
+    left: 20px;
+  }
+}
+.navigation__wrapper {
   height: 50px;
   width: 1200px;
-  max-width:1200px;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.links-wrapper{
+.links-wrapper {
   width: 1000px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-@media screen and (max-width:1366px){
-  .links-wrapper{
+@media screen and (max-width: 1365px) {
+  .links-wrapper {
     display: none;
   }
 }
-.link__text{
+.link__text {
   color: white;
   font-weight: bolder;
   display: flex;
@@ -87,16 +94,16 @@ body {
   align-items: center;
   transition: color 300ms ease-out;
 }
-.link{
+.link {
   height: 50px;
   display: flex;
   align-items: center;
 }
 
-.link:not(:last-child){
+.link:not(:last-child) {
   margin-right: 40px;
 }
-.triangle{
+.triangle {
   display: inline-block;
   vertical-align: middle;
   margin: 3px 0 0 4px;
@@ -105,9 +112,8 @@ body {
   border-color: transparent;
   border-top-color: white;
   transition: color 300ms ease-out;
-
 }
-.triangle{
+.triangle {
   display: inline-block;
   vertical-align: middle;
   margin: 3px 0 0 4px;
@@ -116,13 +122,13 @@ body {
   border-color: transparent;
   border-top-color: white;
 }
-.link--button{
+.link--button {
   height: 50px;
   padding: 0 30px;
   background-color: #0042ce;
   transition: background-color 300ms ease-out;
 }
-.big-triangle{
+.big-triangle {
   display: inline-block;
   vertical-align: middle;
   margin: -2px -12px 0 8px;
@@ -131,17 +137,17 @@ body {
   border-color: transparent;
   border-left-color: white;
 }
-.link:hover .link__text{
-  color:#89e6d9;  
+.link:hover .link__text {
+  color: #89e6d9;
 }
-.link:hover .triangle{
+.link:hover .triangle {
   border-top-color: #89e6d9;
 }
- .link:hover .link--button{
+.link:hover .link--button {
   color: white;
   background-color: #89e6d9;
- }
-.mobile-mini-menu{
+}
+.mobile-mini-menu {
   border: 0px solid white;
   background-color: white;
   position: absolute;
@@ -150,38 +156,89 @@ body {
   transition: top 300ms ease-out;
   display: none;
 }
-.link:hover .mobile-mini-menu{
-  display:flex;
-  top:65px;
+.link:hover .mobile-mini-menu {
+  display: flex;
+  top: 65px;
 }
-.mobile-mini-menu:hover{
-  display:flex;
+.mobile-mini-menu:hover {
+  display: flex;
 }
-.mobile-links{
+.mobile-links {
   width: 40%;
   display: flex;
   flex-direction: column;
   margin-left: 40px;
 }
-.mobile-link{
+.mobile-link {
   margin-top: 20px;
   color: black;
   font-weight: lighter;
   font-size: 13px;
   transition: color 300ms ease-out;
-
 }
-.mobile-link:first-child{
+.mobile-link:first-child {
   margin-top: 30px;
 }
-.mobile-link:last-child{
+.mobile-link:last-child {
   margin-bottom: 30px;
 }
-.mobile-photo{
+.mobile-photo {
   display: flex;
   align-self: end;
   height: 50%;
 }
-.mobile-link:hover{
+.mobile-link:hover {
   color: #89e6d9;
+}
+.hamburger {
+  display: none;
+}
+@media screen and (max-width: 1365px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 30px;
+    justify-content: space-between;
+  }
+  .hamburger > div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+  }
+}
+.hidden {
+  opacity: 0;
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+.navigation__wraper-mobile {
+  display: none;
+}
+@media screen and (max-width: 1365px) {
+  .navigation__wraper-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    right: 0;
+    transition: top 300ms ease-out;
+  }
+}
+.hidden:checked ~ .navigation__wraper-mobile {
+  top: 80px;
+}
+.mobile-center {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.link:checked .mobile-mini-menu {
+  display: flex;
+  top: 65px;
 }
