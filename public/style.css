@@ -273,3 +273,49 @@ h1{
   font-size: 60px;
   color:white;
 }
+
+/*Why-tiller*/
+.blue{
+  margin-top: 300px;
+  width: 100%;
+  height: 570px;
+  position: relative;
+  background-color: #89e6d9;
+}
+.white{
+  width: 95%;
+  height: 110%;
+  position: absolute;
+  top:-20%;
+  background-color: white;
+  bottom: 30px;
+}
+.white__text{
+  z-index: 85;
+  width: 70%;
+  margin-top: 70px;
+  margin-left: 70px;
+  margin-right: 15px;
+}
+@media screen and (max-width: 875px) {
+  .white__text{
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+h5{
+  font-size: 26px;
+  color: black;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+h3{
+  font-family:serif;
+  font-weight: 700;
+  font-size: 42px;
+  color:black;
+  width: 100%;
+  max-width: 100%;
+}
