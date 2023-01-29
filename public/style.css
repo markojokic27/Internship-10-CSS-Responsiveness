@@ -41,7 +41,6 @@ body {
 .layout-spacing {
   max-width: 1200px;
   margin: 80px auto;
-  height: 3000px;
 }
 @media screen and (max-width: 1365px) {
   .layout-spacing {
@@ -379,8 +378,47 @@ h3{
 .features__wrapper{
   margin-top: 30px;
   display: flex;
+  position: relative;
 
 }
 .sticky-img{
-  
+  width: 50%;
+  position: sticky;
+  top: 200px;
+}
+.cube{
+  width: 520px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.h3-cube{
+  color: white;
+}
+.h5-cube{
+  color: white;
+}
+.button-cube{
+  height: 50px;
+  padding: 0 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: background-color 300ms ease-out;
+}
+
+ .link:hover .button-cube{
+  background-color: white;
+  color: #0042ce;
+}
+.big-triangle-cube{
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px -12px 0 8px;
+  border-style: solid;
+  border-width: 9px 11px;
+  border-color: transparent;
+  border-left-color: white;
+}
+.link:hover .big-triangle-cube{
+  border-left-color:#0042ce;
 }
