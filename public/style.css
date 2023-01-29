@@ -378,19 +378,22 @@ h3{
 .features__wrapper{
   margin-top: 30px;
   display: flex;
+  align-items: flex-start;
   position: relative;
-
+  width: 100%;
 }
 .sticky-img{
-  width: 50%;
+  width: 40%;
   position: sticky;
-  top: 200px;
+  top: 100px;
 }
 .cube{
   width: 520px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  border-bottom: 50px;
+  max-width: 520px;
 }
 .h3-cube{
   color: white;
@@ -406,7 +409,7 @@ h3{
   transition: background-color 300ms ease-out;
 }
 
- .link:hover .button-cube{
+.link:hover .button-cube{
   background-color: white;
   color: #0042ce;
 }
@@ -421,4 +424,24 @@ h3{
 }
 .link:hover .big-triangle-cube{
   border-left-color:#0042ce;
+}
+@media screen and (max-width: 875px)
+{
+  .features__wrapper{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .sticky-img{
+    position:static;
+  }
+  .cube{
+    width:100% ;
+  }
+  .h3-cube{
+    width: 100%;
+  }
+  .h5-cube{
+    width:100%
+  }
 }
